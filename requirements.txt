@@ -1,0 +1,6 @@
+# This requirements file only specifies things needed for development and
+# testing. The application requirements are expressed as the single point of
+# truth in setup.py
+flask-shell
+ptipython
+wheel
