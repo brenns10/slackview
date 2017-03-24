@@ -9,5 +9,6 @@ setup(
         'sqlalchemy',
         'flask-sqlalchemy',
         'flask-cas',
+        'flask-script',
     ],
 )

@@ -7,7 +7,7 @@ class User(db.Model):
 
     id = db.Column(db.String(9), primary_key=True)
     username = db.Column(db.String(64), nullable=False)
-    realname = db.Column(db.String(256), nullable=False)
+    realname = db.Column(db.String(256))
     title = db.Column(db.Text)
 
     # profile images will likely come in handy

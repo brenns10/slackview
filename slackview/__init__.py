@@ -9,3 +9,7 @@ app.config.from_envvar('SLACKVIEW_SETTINGS')
 cas = CAS(app, '/cas')
 db = SQLAlchemy(app)
 manager = Manager(app)
+
+from . import models
+from . import logic
+from . import scripts

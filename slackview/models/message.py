@@ -31,12 +31,18 @@ class MessageSubtype(enum.Enum):
     file_mention = 21
     pinned_item = 22
     unpinned_item = 23
+    # begin undocumented subtypes D:
+    bot_add = 24
+    bot_remove = 25
+    slackbot_response = 26
+    reply_broadcast = 27
+    bot_disable = 28
 
 
 class Message(db.Model):
     __tablename__ = 'messages'
 
-    text = db.Column(db.Text, nullable=False)
+    text = db.Column(db.Text)
     subtype = db.Column(db.Enum(MessageSubtype))
     user_id = db.Column(db.String(9), db.ForeignKey('users.id'))
     bot_id = db.Column(db.String(9))

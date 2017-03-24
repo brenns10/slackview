@@ -12,7 +12,7 @@ class Reaction(db.Model):
     )
 
     name = db.Column(db.String(64), primary_key=True)
-    channel_id = db.Column(db.String(9), primar_key=False)
-    timestamp = db.Column(db.Timestamp(timezone=True), primary_key=False)
-    user_id = db.Column(db.String(9), db.ForeginKey('users.id'),
-                        primary_key=False)
+    channel_id = db.Column(db.String(9), primary_key=True)
+    timestamp = db.Column(db.DateTime(timezone=True), primary_key=True)
+    user_id = db.Column(db.String(9), db.ForeignKey('users.id'),
+                        primary_key=True)

@@ -1,6 +1,6 @@
 venv
 __pycache__
-quotewall.egg-info
+slackview.egg-info
 dist
 build
 config.py
