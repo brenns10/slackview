@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}#{{ channel.name }} logs{% endblock %}
+{% block content %}
+    <h1>#{{ channel.name }} logs</h1>
+    {% for message in log %}
+        <p>{{ message.text }}</p>
+    {% endfor %}
+    {% if prev_ts %}
+        <a href="{{ url_for('view_log', channel=channel.name, timestamp=prev_ts) }}">Previous</a>
+    {% endif %}
+    {% if next_ts %}
+        <a href="{{ url_for('view_log', channel=channel.name, timestamp=next_ts) }}">Next</a>
+    {% endif %}
+{% endblock %}

@@ -13,3 +13,4 @@ manager = Manager(app)
 from . import models
 from . import logic
 from . import scripts
+from . import views
